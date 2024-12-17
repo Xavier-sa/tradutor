@@ -12,10 +12,11 @@ class DicionarioView:
     
     @staticmethod
     def mostrar_mensagem(mensagem):
+        print(f"{'-'*20}")
         print(mensagem)
         
     @staticmethod
-    def obter_palvra_e_traducao():
+    def obter_palavra_e_traducao():
         palavra_ingles = input("Digite a palavra em inglês:").strip()
         traducao_portugues =input("Digite a tradução em português:").strip()
         return palavra_ingles,traducao_portugues
