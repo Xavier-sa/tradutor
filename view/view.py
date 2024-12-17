@@ -2,7 +2,8 @@ class DicionarioView:
     @staticmethod
     def mostrar_menu():
         print("\nMenu")
-        print("2.Procudar tradução")
+        print("1.Adicionar palavra")
+        print("2.Procurar tradução")
         print("3.SAIR")
         
     @staticmethod

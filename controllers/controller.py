@@ -1,5 +1,5 @@
-from model import DicionarioModel
-from view import DicionarioView
+from model.Dicionario import DicionarioModel
+from view.view import DicionarioView
 
 class DicionarioController:
     def __init__(self):
