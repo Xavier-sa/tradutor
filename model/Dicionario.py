@@ -26,3 +26,14 @@ class DicionarioModel:
         self.dicionario[palavra_ingles] = traducao_portugues
         self.salvar_dicionario()
         return True        
+    
+    def procurar_palavra(self,busca):
+        #Procura uma palavra em ingles ou portugues no dicionario
+        for palavra_ingles, traducao_portugues in self.dicionario.items():
+            if busca.lower() == palavra_ingles.lower():
+                return f"Tradução de '{palavra_ingles}':{traducao_portugues}"
+            
+            elif busca.lowe() == traducao_portugues.lower():
+                return f"A palavra em inglês para '{traducao_portugues}' é: {palavra_ingles}"
+        return "Palavra não encontrada."
+    
