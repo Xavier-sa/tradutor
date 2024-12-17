@@ -33,7 +33,7 @@ class DicionarioModel:
             if busca.lower() == palavra_ingles.lower():
                 return f"Tradução de '{palavra_ingles}':{traducao_portugues}"
             
-            elif busca.lowe() == traducao_portugues.lower():
+            elif busca.lower() == traducao_portugues.lower():#corrigi a linha faltava o lower
                 return f"A palavra em inglês para '{traducao_portugues}' é: {palavra_ingles}"
         return "Palavra não encontrada."
     
