@@ -19,3 +19,10 @@ class DicionarioModel:
         with open(self.arquivo,'w',encoding='utf-8') as arquivo:
             json.dump(self.dicionario,arquivo,ensure_ascii=False,indent=4)
             
+    def adicionar_palavra(self, palavra_ingles, traducao_portugues):
+        #Add uma palavra e sua tradução ao dicionario
+        if palavra_ingles in self.dicionario:
+            return False
+        self.dicionario[palavra_ingles] = traducao_portugues
+        self.salvar_dicionario()
+        return True        
