@@ -14,3 +14,8 @@ class DicionarioModel:
         except FileNotFoundError:
             return{}
         
+    def salvar_dicionario(self):
+        #Salva o dicionario no arquivo Json
+        with open(self.arquivo,'w',encoding='utf-8') as arquivo:
+            json.dump(self.dicionario,arquivo,ensure_ascii=False,indent=4)
+            
